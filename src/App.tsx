@@ -3,7 +3,8 @@
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1 style={{ color: "blue" }}>Hello World</h1>
+      <p>hello everyone</p>
     </div>
   );
 }

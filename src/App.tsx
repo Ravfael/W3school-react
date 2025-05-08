@@ -54,3 +54,36 @@ const myArray = ["apple", "banana", "orange"];
 const myList = myArray.map((item) => {
   item;
 });
+
+//
+const element = <h1 className="myclass">react is {5 + 5} faster with jsx</h1>;
+const myElements = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Manggo</li>
+  </ul>
+);
+const tes = (
+  <div>
+    <p>this is a paragraph 1</p>
+    <p>this is a paragraph 2</p>
+  </div>
+);
+const test = (
+  <>
+    <p>self taging</p>
+    <p>self taging</p>
+  </>
+);
+const myElement = <input type="text" />;
+
+const x = 5;
+let text = "goodbye";
+if (x < 10) {
+  text = "hello";
+}
+const loop = <h1>{text}</h1>;
+
+const y = 5;
+const myTernary = <h1>{x < 10 ? "hello" : "goodbye"}</h1>;

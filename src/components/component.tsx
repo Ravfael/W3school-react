@@ -59,6 +59,12 @@ class Mobils extends React.Component {
     };
   }
 
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     this.setState({ favoritecolor: "yellow" });
+  //   }, 1000);
+  // }
+
   changeColor = () => {
     this.setState({ color: "blue" });
   };
@@ -79,3 +85,37 @@ class Mobils extends React.Component {
     );
   }
 }
+
+// Class
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ favoritecolor: "yellow" });
+    }, 1000);
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    document.getElementById("div1").innerHTML = "before the update, the favorite was " + prevState.favoritecolor;
+  }
+
+  componentDidUpdate() {
+    document.getelementById("div2").innerHTML = "the update favorite is " + this.state.favoritecolor;
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>my favorite color is {this.state.favoritecolor}</h1>
+        <div id="div1"></div>
+        <div id="div2"></div>
+      </div>
+    );
+  }
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />);

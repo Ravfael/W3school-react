@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
+import "./belajar.css";
 
 function MyForm() {
   const [name, setName] = useState("");
@@ -57,3 +58,33 @@ function MyForm() {
     </form>
   );
 }
+
+// styling with css
+const Header = () => {
+  return (
+    <>
+      <h1 style={{ color: "red" }}>Hello Style</h1>
+      <h1 style={{ backgroundColor: "blue" }}>Hello Style</h1>
+      <p>add a little style</p>
+    </>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Page />);
+
+const Page = () => {
+  const myStyle = {
+    color: "blue",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Sans-Serif",
+  };
+  return (
+    <>
+      <h1 style={myStyle}>Hello Style</h1>
+      <p>add a little style</p>
+    </>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Page />);
